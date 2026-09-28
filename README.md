@@ -21,25 +21,32 @@ blogs, blog-detail, contact, signup, plus privacy and terms (footer links).
 
 Hero and infographic visuals are inline animated SVG, so there are no image files to load.
 
-## Must replace before launch
-jnitinc.com could not be reached from the build environment, so these items are
-placeholders and are marked in the markup (`.ph`, `.ph-note`, `REPLACE` / `CONTENT` comments):
+## Content source
+Text now comes verbatim from jnitinc.com wherever the page could be read
+(marked in the markup with `CONTENT: verbatim from jnitinc.com/...` comments):
 
-1. **Logo and brand colors.** The logo is a placeholder mark. Replace the SVG in
-   `header`/`footer` and `assets/logos/`, then set `--primary` / `--secondary` in
-   `css/style.css` to the official logo colors.
-2. **Contact details.** Email, phone, street address and hours. Location shows
-   "Parlin, New Jersey" from a public directory listing; please confirm.
-3. **Social links** in the footer (currently `#`).
-4. **Service page copy.** Written to match JNIT's positioning; compare against each
-   service page on jnitinc.com and paste the original text where it differs.
-5. **About story** (founding, HQ, milestones), careers culture and benefits.
-6. **Job listings** on careers.html are samples.
-7. **Blog posts** on blogs.html / blog-detail.html are samples; use the posts from
-   jnitinc.com/category/blog.
-8. **Privacy Policy and Terms** pages contain placeholder text.
-9. **Forms** simulate success. Connect them to a form service or endpoint in `js/forms.js`.
+- About: hero, story, Mission & Vision, approach, strengths ("Why JNIT"), offerings
+- Careers: the 3 openings (Senior DevOps Engineers, Senior Full Stack Developers,
+  Senior Software Developers .NET), requirements and how to apply. The Full Stack and
+  .NET descriptions follow the DevOps listing with their own technology lists; check them.
+- Project Staffing, Contract Staffing, Recruiter on Demand: "The JNIT Approach" steps
+- Digital Transformation and Product Development: all paragraphs
+- "Types OF Resources" section on the staffing pages
+- Address: 3145 Bordentown Avenue, Suite D1, Parlin, NJ 08859
+- Home: strengths and offerings from the About page
 
-The home intro paragraph and the service names are JNIT's own wording.
-Statistics use only counts that follow from the site itself (3 technology practices,
-6 talent solutions); no business metrics were invented.
+Live-site wording kept as-is (fix if you want): "Let Us Your Elevate your business...",
+"Digital Innovation" repeats the Global Talent text, and one sentence ends at "enhance financial".
+The About FAQ on the live site is template text from another company, so it was left out.
+
+## Still to replace before launch
+jnitinc.com timed out for these pages, so they are placeholders (`.ph`, `REPLACE` comments):
+
+1. **Logo and brand colors.** Replace the SVG in `header`/`footer` and `assets/logos/`,
+   then set `--primary` / `--secondary` in `css/style.css`.
+2. **Email, phone, hours** on contact.html and the footer; **social links** (currently `#`).
+3. **Home page** hero and intro, **Services** overview, **Direct Staffing**, **Contract to Hire**,
+   **RPO** and **Multi-Cloud DevOps** body copy.
+4. **Placements / Clients served till 2024** figures on about.html (`[number]`).
+5. **Blog posts** (blogs.html / blog-detail.html are samples) and **Privacy / Terms** text.
+6. **Forms** simulate success. Connect them to a form service in `js/forms.js`.
