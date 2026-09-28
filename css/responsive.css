@@ -1,0 +1,161 @@
+/* ==========================================================================
+   JNIT Inc — Responsive layer
+   Desktop  > 1280 | Laptop 1024–1280 | Tablet 768–1023 | Mobile < 768 | Small < 400
+   ========================================================================== */
+
+@media (max-width: 1280px) {
+  .nav-link { padding: 10px 11px; }
+  .info-card.a { left: -2%; }
+  .info-card.b { right: -2%; }
+}
+
+/* Collapse navigation */
+@media (max-width: 1120px) {
+  .main-nav, .nav-actions .nav-signup, .nav-actions .btn { display: none; }
+  .menu-toggle { display: block; }
+}
+@media (min-width: 1121px) {
+  .mobile-menu { display: none; }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid, .home-hero .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual { max-width: 480px; }
+  .home-hero { min-height: auto; }
+  .home-hero .hero-visual { margin-top: 24px; }
+  .page-hero h1 { max-width: 18ch; }
+  .scroll-cue { display: none; }
+
+  .section-head { grid-template-columns: 1fr; align-items: start; }
+
+  .bento { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .bento > .svc-card { grid-column: span 3; grid-row: auto; }
+  .bento > .b-1, .bento > .b-7 { grid-column: span 6; }
+
+  .impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .impact-item:nth-child(2) { border-right: 0; }
+  .impact-item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+
+  .editorial, .split, .contact-layout, .recruiter-panel, .newsletter { grid-template-columns: 1fr; }
+  .split .sticky { position: static; }
+  .visual-frame { aspect-ratio: 16 / 12; }
+
+  .feature-grid, .cards-3, .related { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cards-4, .values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .process, .process.cols-5, .process.cols-7 { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: var(--s-8); }
+  .process-track { display: none; }
+  .step::before { top: -32px; }
+
+  .journey { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .footer-top { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .footer-brand { grid-column: 1 / -1; }
+
+  .cta-band { grid-template-columns: 1fr; align-items: start; }
+
+  .job-card { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .job-card .job-title { grid-column: 1 / -1; }
+  .job-card .btn { grid-column: 1 / -1; justify-self: start; }
+
+  .featured-post { grid-template-columns: 1fr; }
+  .featured-post .fp-media { min-height: 280px; }
+  .blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .article-layout { grid-template-columns: 56px minmax(0, 1fr); }
+  .article-aside { display: none; }
+
+  .auth { grid-template-columns: 1fr; }
+  .auth-visual-side { order: -1; min-height: auto; padding-bottom: 40px; }
+  .auth-visual-side .hero-visual { max-width: 320px; }
+  .auth-form-side { padding-top: 56px; }
+
+  .seq:not(.vertical) { flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .seq:not(.vertical) .seq-link { display: none; }
+  .seq:not(.vertical) .seq-step { flex: 0 1 calc(33.333% - 12px); }
+}
+
+@media (max-width: 900px) {
+  .bridge { grid-template-columns: 1fr; gap: var(--s-4); }
+  .bridge-center { min-height: 200px; order: -1; }
+  .bridge-center svg { display: none; }
+  .bridge-col.right h3 { text-align: left; }
+  .bridge-col.right .bridge-item { flex-direction: row; text-align: left; }
+}
+
+@media (max-width: 767px) {
+  :root { --header-h: 68px; }
+  .section-head { margin-bottom: 40px; }
+  .btn { min-height: 50px; padding: 0 22px; }
+  .btn-group .btn { flex: 1 1 auto; }
+
+  .bento { grid-template-columns: 1fr; }
+  .bento > .svc-card, .bento > .b-1, .bento > .b-7 { grid-column: 1 / -1; min-height: 220px; }
+
+  .impact-grid { grid-template-columns: 1fr; }
+  .impact-item { border-right: 0; border-bottom: 1px solid var(--border); }
+  .impact-item:last-child { border-bottom: 0; }
+
+  .feature-grid, .cards-3, .cards-2, .cards-4, .values-grid, .tiles, .related, .blog-grid { grid-template-columns: 1fr; }
+  .tile p { max-height: none; opacity: 1; }
+
+  .process, .process.cols-4, .process.cols-5, .process.cols-7 { grid-template-columns: 1fr; padding-top: 0; row-gap: var(--s-4); padding-left: 40px; }
+  .step::before { top: 6px; left: -40px; }
+  .process::after { content: ""; position: absolute; left: 8px; top: 12px; bottom: 12px; width: 2px; background: var(--border); z-index: -1; }
+  .section-dark .process::after { background: rgba(255,255,255,.1); }
+
+  .journey { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5) var(--s-3); }
+  .footer-bottom { flex-direction: column; }
+
+  .form-grid { grid-template-columns: 1fr; }
+  .job-card { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 22px; }
+
+  .info-card { position: relative; inset: auto !important; margin-top: 12px; animation: none; }
+  .visual-wrap { display: flex; flex-direction: column; }
+
+  .seq:not(.vertical) .seq-step { flex: 0 1 calc(50% - 12px); }
+  .location-map { aspect-ratio: 4 / 5; }
+  .location-card { right: 16px; max-width: none; }
+  .article-layout { grid-template-columns: 1fr; }
+  .share-rail { position: static; flex-direction: row; order: 2; }
+  .share-rail span { writing-mode: horizontal-tb; transform: none; margin: 0 8px 0 0; align-self: center; }
+  .article-cover { aspect-ratio: 16 / 10; }
+  .float-chip { font-size: .72rem; padding: 8px 10px; }
+  .float-chip .fc-icon { width: 24px; height: 24px; }
+  .cta-band .cta-svg { width: 360px; height: 360px; right: -140px; top: -120px; }
+  .blog-toolbar { flex-direction: column; align-items: stretch; }
+  .search-box { max-width: none; }
+  .modal-head, .modal-body { padding-left: 22px; padding-right: 22px; }
+}
+
+@media (max-width: 430px) {
+  .home-hero h1 { font-size: clamp(2.3rem, 11vw, 3rem); }
+  .page-hero h1 { font-size: clamp(2.1rem, 10vw, 2.8rem); }
+  .btn-group { flex-direction: column; }
+  .btn-group .btn { width: 100%; }
+  .footer-top { grid-template-columns: 1fr; }
+  .job-card { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .seq:not(.vertical) .seq-step { flex: 0 1 100%; }
+  .pill { font-size: .74rem; }
+  .story-flow li { font-size: .9rem; }
+  .story-flow .sf-arrow { display: none; }
+  .hero-visual .float-chip.hide-sm { display: none; }
+  .range-out { font-size: 2.6rem; }
+}
+
+@media (max-width: 380px) {
+  :root { --gutter: 16px; }
+  .logo svg { height: 34px; }
+  .float-chip { display: none; }
+  .info-card { padding: 12px 14px; }
+}
+
+/* Hover-capable devices only: keep tap targets calm on touch */
+@media (hover: none) {
+  .svc-card:hover, .feature:hover, .card:hover, .job-card:hover { transform: none; }
+}
+@media (max-width: 600px) {
+  .hero-visual .float-chip.hide-sm { display: none; }
+}
