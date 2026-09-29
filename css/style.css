@@ -213,7 +213,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border-bottom: 1px solid transparent;
 }
 .site-header.is-scrolled, .header-solid .site-header {
-  background: rgba(255, 255, 255, .92);
+  background: #fff;
   backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px);
   color: var(--text); border-bottom-color: rgba(12, 21, 51, .07);
   box-shadow: 0 8px 30px -18px rgba(12, 21, 51, .25);
@@ -222,6 +222,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); }
 
 .logo { display: inline-flex; align-items: center; gap: 10px; flex: none; }
+.logo img { max-width: 60%; }
 .logo svg { height: 40px; width: auto; }
 .logo .logo-word { fill: currentColor; }
 
@@ -687,6 +688,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .site-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(95,227,255,.5), transparent); }
 .footer-top { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); gap: var(--s-6); padding-bottom: var(--s-8); border-bottom: 1px solid var(--border-dark); }
 .footer-brand .logo { color: #fff; margin-bottom: var(--s-3); }
+.footer-brand .logo img { max-width: 60%; }
 .footer-brand p { font-size: .93rem; max-width: 44ch; }
 .footer-col h4 { color: #fff; font-family: var(--font-body); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-bottom: var(--s-3); }
 .footer-col ul { display: grid; gap: 10px; }
